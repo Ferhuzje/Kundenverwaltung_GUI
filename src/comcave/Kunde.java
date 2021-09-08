@@ -13,8 +13,8 @@ public class Kunde {
 	private String plz;
 	private String ort;
 	private String telefon;
-	private boolean neukunde; // isNeukunde(), setNeukunde()
-	
+	// isNeukunde(), setNeukunde()
+	private boolean neukunde; 
 	public Kunde() {
 		
 	}

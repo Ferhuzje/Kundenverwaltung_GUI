@@ -30,7 +30,7 @@ public class Window extends JFrame{
 	public Window() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(900, 700);
-		// Fenster mittig auf Monitor
+		// Fenster mittig auf Monitor 
 		setLocationRelativeTo(null); 
 		setLayout(null);
 		

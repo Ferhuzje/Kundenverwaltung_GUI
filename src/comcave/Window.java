@@ -108,7 +108,7 @@ public class Window extends JFrame{
 		cbAnrede.addItem("Frau");
 		cbAnrede.addItem("Divers");
 		
-		
+		DateiManager.kundenLaden();
 	}
 	
 	public static void main(String[] args) {

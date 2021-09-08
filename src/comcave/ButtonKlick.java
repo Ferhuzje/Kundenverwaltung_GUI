@@ -27,6 +27,9 @@ public class ButtonKlick implements ActionListener{
 					w.tfTelefon.getText(),
 					w.cbxNeukunde.isSelected()
 			));
+			
+			DateiManager.kundenSpeichern();
+			
 		}else if(  e.getSource().equals( w.btnShowKunde )  ) {
 			w.taKundenAnzeige.setText(""); // TextArea leeren
 			String text = "";

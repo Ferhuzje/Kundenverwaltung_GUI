@@ -1,8 +1,9 @@
 package comcave;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Kunde {
+public class Kunde implements Serializable {
 	
 	public static ArrayList<Kunde> kundenListe = new ArrayList<Kunde>();
 	

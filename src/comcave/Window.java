@@ -1,5 +1,6 @@
 package comcave;
 
+import java.util.ArrayList;
 import javax.swing.*;
 
 public class Window extends JFrame{
@@ -25,6 +26,8 @@ public class Window extends JFrame{
 	
 	JButton btnShowKunde;
 	JTextArea taKundenAnzeige;
+	
+	JButton btnCsvExport;
 	
 	
 	public Window() {
@@ -56,7 +59,7 @@ public class Window extends JFrame{
 		btnShowKunde = new JButton("Kunden anzeigen");
 		taKundenAnzeige = new JTextArea();
 		
-		// 3. Formularelemente dem WIndow hinzufügen
+		// 3. Formularelemente dem Window hinzufügen
 		add(lblAnrede);
 		add(lblVorname);
 		add(lblNachname);
@@ -76,6 +79,8 @@ public class Window extends JFrame{
 		
 		add(btnShowKunde);
 		add(taKundenAnzeige);
+		
+		add(btnCsvExport);
 		
 		// 4. Position und Größe Formular-Elemente
 		lblAnrede.setBounds(20, 20, 110, 25);
@@ -102,13 +107,19 @@ public class Window extends JFrame{
 		ButtonKlick klick = new ButtonKlick( this );
 		btnSpeichern.addActionListener( klick );
 		btnShowKunde.addActionListener( klick );
+		btnCsvExport.addActionListener( klick );
 		
 		// JComboBox füllen
 		cbAnrede.addItem("Herr");
 		cbAnrede.addItem("Frau");
 		cbAnrede.addItem("Divers");
 		
-		DateiManager.kundenLaden();
+		if(DateiManager.kundenLaden()) {
+			
+		}else {
+			JOptionPane.showMessageDialog(this, "Kundendaten konnten nicht geladen werden!");
+			Kunde.kundenListe = new ArrayList<Kunde>();
+		}
 	}
 	
 	public static void main(String[] args) {

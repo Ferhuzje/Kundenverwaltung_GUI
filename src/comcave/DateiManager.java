@@ -32,8 +32,7 @@ public class DateiManager {
 		}
 	}	
 	
-	
-	
+		
 //		public static void kundenSpeichern() {
 //			try {
 //				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("kunden.comcave"));
@@ -45,8 +44,7 @@ public class DateiManager {
 //			}
 //			
 //		}
-		
-	
+			
 		public static boolean kundenSpeichern() {
 		try {
 			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("kunden.comcave"));

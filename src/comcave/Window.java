@@ -29,7 +29,6 @@ public class Window extends JFrame{
 	
 	JButton btnCsvExport;
 	
-	
 	public Window() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(900, 700);
